@@ -1,0 +1,20 @@
+{
+  "data": [
+    {
+      "name": "Ivan Ivanov",
+      "age": 30,
+      "email": "ivan.ivanov@example.com"
+    },
+    {
+      "name": "Maria Petrova",
+      "age": 25,
+      "email": "maria.petrova@example.com"
+    },
+    {
+      "name": "Petr Sidorov",
+      "age": 40,
+      "email": "petr.sidorov@example.com"
+    }
+  ]
+}
+

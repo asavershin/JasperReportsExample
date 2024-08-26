@@ -14,7 +14,7 @@ import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 
-public class JasperReportsExample {
+public class FromPojo {
 
   @SneakyThrows
   public static void main(String[] args) {

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports
+              http://jasperreports.sourceforge.net/xsd/jasperreport.xsd"
+              name="SimpleJsonReport"
+              pageWidth="595"
+              pageHeight="842"
+              columnWidth="555"
+              leftMargin="20"
+              rightMargin="20"
+              topMargin="20"
+              bottomMargin="20"
+              uuid="c9a9835c-0c25-4a44-b02e-abc27c7f634b">
+
+    <queryString language="json">
+        <![CDATA[.]]> <!-- Указываем, что данные находятся на корневом уровне -->
+    </queryString>
+
+    <field name="name" class="java.lang.String"/>
+    <field name="age" class="java.lang.Integer"/>
+    <field name="email" class="java.lang.String"/>
+
+    <title>
+        <band height="50">
+            <staticText>
+                <reportElement x="0" y="10" width="555" height="30" uuid="b2f14835-9d34-4533-94bb-47e7ff784dff"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="18" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Person Information Report]]></text>
+            </staticText>
+        </band>
+    </title>
+
+    <detail>
+        <band height="20">
+            <staticText>
+                <reportElement x="0" y="0" width="100" height="20" uuid="f71c60e5-f173-4ae8-b3f5-ec95ec490cb8"/>
+                <textElement verticalAlignment="Middle"/>
+                <text><![CDATA[Name:]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="100" y="0" width="455" height="20" uuid="b2fa96e6-40a9-42e3-8ac7-5d0fe0b57b61"/>
+                <textElement verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+            </textField>
+        </band>
+        <band height="20">
+            <staticText>
+                <reportElement x="0" y="0" width="100" height="20" uuid="d71a31b1-ff48-4850-a0c7-0a477b047d8f"/>
+                <textElement verticalAlignment="Middle"/>
+                <text><![CDATA[Age:]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="100" y="0" width="455" height="20" uuid="b2fa99e6-80a9-42e3-9ac7-5d2fe0b87b61"/>
+                <textElement verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$F{age}]]></textFieldExpression>
+            </textField>
+        </band>
+        <band height="20">
+            <staticText>
+                <reportElement x="0" y="0" width="100" height="20" uuid="e21f60e5-d283-4be8-c3f6-ec90ec191ca9"/>
+                <textElement verticalAlignment="Middle"/>
+                <text><![CDATA[Email:]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="100" y="0" width="455" height="20" uuid="d2f499e9-40b9-52f3-8ac7-7d1fe0d67a90"/>
+                <textElement verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+
+    <pageFooter>
+        <band height="20">
+            <textField>
+                <reportElement x="0" y="0" width="555" height="20" uuid="b2f1c4f7-c5ef-4cb6-b2c7-d1e3574b1b90"/>
+                <textElement textAlignment="Right" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+            </textField>
+        </band>
+    </pageFooter>
+</jasperReport>
+
